@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         val adapterFigure = FigureAdapter(generateDummy(deskripsi)) { Figure ->
             val intentoDeskripsi = Intent(this@MainActivity, DetailPage::class.java)
             intentoDeskripsi.putExtra("IMAGE_URL", Figure.imageURL)
-            intentoDeskripsi.putExtra("Figure_Name", Figure.nameFigure)
-            intentoDeskripsi.putExtra("Figure_Price", Figure.priceFigure)
-            intentoDeskripsi.putExtra("Figure_Description", Figure.detailFigure)
+            intentoDeskripsi.putExtra("NAME_FIGURE", Figure.nameFigure)
+            intentoDeskripsi.putExtra("PRICE_FIGURE", Figure.priceFigure)
+            intentoDeskripsi.putExtra("DESCRIPTION_FIGURE", Figure.detailFigure)
             startActivity(intentoDeskripsi)
         }
 
